@@ -140,7 +140,8 @@ namespace jsk_pcl_ros
       volume_size_vector, shift_distance, caminfo_msg->height, caminfo_msg->width));
 
     Eigen::Matrix3f R = Eigen::Matrix3f::Identity();
-    Eigen::Vector3f t = volume_size_vector * 0.5f - Eigen::Vector3f(0, 0, volume_size_vector(2) / 2 * 1.2f);
+    Eigen::Vector3f t = Eigen::Vector3f::Constant(0.0);
+    // Eigen::Vector3f t = volume_size_vector * 0.5f - Eigen::Vector3f(0, 0, volume_size_vector(2) / 2 * 1.2f);
 
     Eigen::Affine3f pose = Eigen::Translation3f(t) * Eigen::AngleAxisf(R);
 
