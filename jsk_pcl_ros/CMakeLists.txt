@@ -381,6 +381,8 @@ if (PCL_GPU_KINFU_LARGE_SCALE_FOUND AND jsk_rviz_plugins_FOUND)
   include_directories(${jsk_rviz_plugins_INCLUDE_DIRS})
   jsk_pcl_nodelet(src/kinfu_nodelet.cpp
     "jsk_pcl/Kinfu" "kinfu")
+  jsk_pcl_nodelet(src/tsdf_pointcloud_merger_nodelet.cpp
+    "jsk_pcl/TSDFPointcloudMerger" "tsdf_pointcloud_merger")
   include_directories(/usr/local/cuda/include)
 endif (PCL_GPU_KINFU_LARGE_SCALE_FOUND)
 jsk_pcl_nodelet_upstream(jsk_pcl_ros_utils "jsk_pcl/PCDReaderWithPose" "pcd_reader_with_pose")
