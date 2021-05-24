@@ -377,6 +377,8 @@ jsk_pcl_nodelet(src/voxel_grid_large_scale_nodelet.cpp
   "jsk_pcl/VoxelGridLargeScale" "voxel_grid_large_scale")
 jsk_pcl_nodelet(src/ppf_registration_nodelet.cpp
   "jsk_pcl/PPFRegistration" "ppf_registration")
+jsk_pcl_nodelet(src/gpg_nodelet.cpp
+  "jsk_pcl/GPG" "gpg")
 
 # kinfu.h uses jsk_rviz_plugins/OverlayText.h, but jsk_recognition should not depends on jsk_visualization
 find_package(jsk_rviz_plugins QUIET)
