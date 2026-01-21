@@ -124,7 +124,7 @@ class TileImages(ConnectionBasedTransport):
         # convert tile shape: (Y, X) -> (X, Y)
         # if None, shape is automatically decided to be square AMAP.
         if self._shape is None:
-            shape_xy = get_tile_shape(len(imgs))
+            shape_xy = jsk_recognition_utils.get_tile_shape(len(imgs))
         else:
             shape_xy = self._shape[::-1]
         # resize to shrink output image
